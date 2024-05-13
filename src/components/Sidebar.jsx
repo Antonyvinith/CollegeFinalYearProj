@@ -100,16 +100,16 @@ export default function Sidebar() {
           <ListItemComp
             icon={<InsightsIcon />}
             dynamicText="Historical Data Analysis"
-            path="/HD"
-            isSelected={selectedItem === "/HD"}
+            path="/dataAnalytics"
+            isSelected={selectedItem === "/dataAnalytics"}
             onItemClick={handleItemClick}
           />
 
           <ListItemComp
             icon={<PieChartIcon />}
             dynamicText="Predictive Analytics"
-            path="/CC"
-            isSelected={selectedItem === "/CC"}
+            path="/predectiveAnalysis"
+            isSelected={selectedItem === "/predectiveAnalysis"}
             onItemClick={handleItemClick}
           />
 

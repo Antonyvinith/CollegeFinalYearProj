@@ -8,46 +8,34 @@ import ReactPlayer from "react-player";
 import "../Styling/SidebarStyle.css";
 import { Line } from "react-chartjs-2";
 import chartData from "./ChartData";
+import { Pie } from 'react-chartjs-2';
 
-import { Chart, CategoryScale, LinearScale, PointElement } from 'chart.js/auto';
+import { Chart, CategoryScale, LinearScale, PointElement } from "chart.js/auto";
 
 // Register the required scales and elements
 Chart.register(CategoryScale, LinearScale, PointElement);
 
-
 // Register the required scales
-
 
 //import video from "https://vimeo.com/oembed?url=https://vimeo.com/945732013"
 
-function DataAnalytics() {
-  
+function pieChart() {
   const data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["Red", "Blue", "Yellow"],
     datasets: [
       {
-        label: "Usages",
-        data: [65, 59, 80, 81, 56, 55, 40],
-        fill: false,
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
-      },
-      {
-        label: "Data Values",
-        data: [48, 72, 65, 91, 78, 60, 55],
-        fill: false,
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
-        borderWidth: 1,
+        data: [300, 50, 100],
+        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+        hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
       },
     ],
   };
 
   const options = {
-    scales: {
-      y: {
-        beginAtZero: true,
+    plugins: {
+      title: {
+        display: true,
+        text: "My Pie Chart",
       },
     },
   };
@@ -65,14 +53,13 @@ function DataAnalytics() {
           <div className="container">
             <div className="py-">
               <Box height={40} />
-              <h1>Data Analytics</h1>
+              <h1>Predective Analysis</h1>
             </div>
           </div>
           <div className="chart-container">
             <h2 style={{ textAlign: "center" }}>Line Chart</h2>
             <div>
-             
-              <Line data={data} options={options} />
+              <Pie data={data} options={options} />
             </div>
           </div>
         </Box>
@@ -81,4 +68,4 @@ function DataAnalytics() {
   );
 }
 
-export default DataAnalytics;
+export default pieChart;

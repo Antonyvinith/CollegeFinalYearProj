@@ -31,6 +31,7 @@ import Fulfillments from "./pages/Fulfillments";
 import ViewImages from "./components/ViewImages";
 import DataAnalytics from "./DataAnalytics/DataAnalytics";
 
+import pieChart from "./DataAnalytics/PieChartData";
 
 function App() {
   console.log("heyyy");
@@ -60,7 +61,8 @@ function App() {
                 
                 <Route exact path='/dashboard' Component={HomeDashboard}/>
                 <Route path='/CreateAdmin' Component={CreateAdmin}/>
-                <Route path='/CreateAdmin' Component={DataAnalytics}/>
+                <Route path='/dataAnalytics' Component={DataAnalytics}/>
+                <Route path='/predectiveAnalysis' Component={pieChart}/>
                 <Route path='/viewVideo' Component={viewVideo}/>
 
                 <Route path="viewImages" Component={ViewImages}/>
