@@ -1,0 +1,79 @@
+/* Container for the article creation section */
+.article-creation-container {
+    width: 500px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container and add margin */
+    padding: 20px; /* Add padding around the container */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow for some depth */
+}
+
+/* Heading style */  
+.article-creation-container h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #333; /* Dark text color */
+}
+
+/* Input container style */
+.article-creation-inputs {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange inputs vertically */
+    gap: 10px; /* Space between input fields */
+}
+
+/* Input field styles */
+.article-creation-inputs input {
+    width: 100%; /* Full width */
+    padding: 8px; /* Add padding inside the input */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    font-size: 14px; /* Text size */
+}
+
+/* CSS class to hide the number spinner in the number input fields */
+.article-creation-inputs input.no-spin {
+    /* Hide the spinner */
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: textfield;
+}
+
+/* Button container style */
+.article-creation-buttons {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space buttons out */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+/* Button styles */
+.article-creation-buttons button {
+    width: 48%; /* Equal width for buttons */
+    padding: 10px; /* Add padding inside the buttons */
+    border-radius: 4px; /* Rounded corners */
+    border: none; /* No border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Specific button color and hover effects */
+.article-creation-buttons button[type="button"] {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold text */
+}
+
+.article-creation-buttons button[type="button"]:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+}
+
+.article-creation-buttons button[type="submit"] {
+    background-color: #28a745; /* Bootstrap success color */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold text */
+}
+
+.article-creation-buttons button[type="submit"]:hover {
+    background-color: #218838; /* Darker shade of green */
+}
+   
+   

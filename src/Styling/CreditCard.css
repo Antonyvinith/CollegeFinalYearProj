@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+.container {
+  background-color: #fff;
+
+  border-radius: 10px;
+
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-image {
+  margin-right: 20px;
+  position: absolute;
+}
+.credit-card-image {
+  position: relative;
+  margin-left: -130px;
+  max-width: 100px;
+  margin-right: 30px;
+}
+
+.card-image img {
+  /* Adjust the max-width to make the image smaller */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.eye-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #555;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-number,
+.card-holder,
+.expiration-cvv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.expiration-cvv {
+  justify-content: space-between;
+}
+
+.card-number .value {
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+}
+
+.label {
+  font-weight: 700;
+  margin-right: 15px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.value {
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin-top: 30px;
+  margin-left: 570px;
+}

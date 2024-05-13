@@ -1,0 +1,95 @@
+
+
+ .footer-container{
+  width:90%;
+  color: white;
+  margin: auto;
+
+ }
+
+ .footer-div{
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .footer-inner-div h3, .footer-media h3,  .footer-contact h3, .footer-address h3{
+  font-size: 18px;
+  
+ }
+
+ .footer-inner-div, .footer-media, .footer-contact, .footer-address{
+
+  flex-basis: 25% !important;
+ }
+
+ */
+
+ .footer-footer{
+  background-color: #343A40;
+  /* position: absolute !important;
+    bottom: 0 !important; */
+ }
+ .footer-container{
+  width:90%;
+  color: white;
+  margin: auto;
+ }
+ .footer-div{
+  display: flex;
+  justify-content: space-around;
+ }
+ .footer-inner-div h3, .footer-media h3,  .footer-contact h3, .footer-address h3{
+  font-size: 18px;
+  
+ }
+ .footer-inner-div, .footer-media, .footer-contact, .footer-address{
+  flex-basis: 25% !important;
+ }
+ /* Footer container */
+.footer-footer {
+  background-color: #333; /* Background color for the footer */
+  color: #fff; /* Text color for the footer */
+  padding: 5px 0; /* Padding for the top and bottom of the footer */
+}
+/* Footer content container */
+.footer-container {
+  max-width: 1200px; /* Maximum width of the footer content */
+  margin: 0 auto; /* Center the footer content */
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  justify-content: space-between; /* Space items evenly across the container */
+}
+/* Footer columns */
+.footer-div {
+  flex: 1 1 calc(25% - 20px); /* Set the width of each column */
+  margin-right: 20px; /* Add some margin between columns */
+}
+/* Footer section title */
+.footer-div h3 {
+  color: #ffcc00; /* Title color */
+  margin-bottom: 15px; /* Add margin to the bottom of the title */
+}
+/* Footer section content */
+.footer-div p {
+  margin-bottom: 15px; /* Add margin to the bottom of the paragraph */
+}
+/* Social media icons */
+.social-icons a {
+  color: #fff; /* Text color for social media links */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Ensure icons are displayed as blocks */
+  margin-bottom: 10px; /* Add margin between icons */
+  transition: color 0.3s ease; /* Add smooth transition effect */
+}
+.social-icons a:hover {
+  color: #ffcc00; /* Change text color on hover */
+}
+/* Footer copyright notice */
+.footer-last {
+  text-align: center; /* Center align text */
+  width: 100%; /* Ensure full width */
+  margin-top: 20px; /* Add margin to the top */
+}
+.text-muted {
+  color: #ccc; /* Text color for copyright notice */
+}

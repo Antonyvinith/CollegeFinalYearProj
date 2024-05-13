@@ -1,0 +1,31 @@
+.orders {
+    display: flex;
+    margin: 20px;
+    height: 120px;
+    /* height: 103.5px; */
+    width: 95%;
+    /* background-color: yellow; */
+}
+
+.outsideOrders{
+    background-color: aquamarine;
+}
+/* Make sure Card takes full width */
+.orders .card {
+    width: 100%;
+}
+/* .ordersCard {
+    flex: 1;
+    padding: 20px; 
+    height: 150px; 
+    overflow: hidden; 
+    margin-right: 20px; 
+    width: 100%;
+} */
+.innerOrders {
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+    /* background-color: brown; */
+    height: 70px;
+}

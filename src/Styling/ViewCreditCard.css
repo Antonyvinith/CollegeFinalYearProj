@@ -1,0 +1,28 @@
+.card-container-View {
+  width: 450px;
+  height: 150px;
+  border: 2px solid #007bff; /* Change border color to blue */
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.card-container-View:hover {
+  background-color: #e9ecef; /* Lighter gray background on hover */
+}
+
+.card-info {
+  padding: 8px;
+  color: #212529; /* Dark text color */
+}
+
+.label {
+  font-weight: bold;
+  color: #007bff; /* Blue label text */
+}
+
+.value {
+  margin-left: 5px;
+  color: #6c757d; /* Gray value text */
+}

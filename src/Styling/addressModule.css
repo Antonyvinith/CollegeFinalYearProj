@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px; /* Add some space below the label */
+}
+
+input[type="text"] {
+  width: 100%; /* Make the input fields take up the full width */
+  padding: 8px; /* Reduce padding for smaller input fields */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.input-group {
+  position: relative;
+}
+
+/* Style for card icon (you may replace this with your desired card icon) */
+.input-group::after {
+  content: "\f09d"; /* Unicode for credit card icon */
+  /* font-family: "Font Awesome 5 Free"; */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.expiration-security {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

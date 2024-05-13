@@ -1,0 +1,32 @@
+.ship-container {
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.ship-option {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 800px; /* Adjust margin for smaller screens */
+}
+
+.ship-option input[type="radio"] {
+  margin-right: 10px;
+  order: -1; /* Adjust spacing between radio button and text */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .ship-option {
+    margin-right: 5%; /* Adjust margin for smaller screens */
+  }
+}
+
+/* Add horizontal line */
+.ship-container:after {
+  content: "";
+  display: block;
+  margin-top: 20px;
+  border-bottom: 2px solid #ccc; /* Adjust line color and style as needed */
+}

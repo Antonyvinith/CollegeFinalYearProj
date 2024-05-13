@@ -1,0 +1,24 @@
+.payment-container {
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.payment-option {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 800px; /* Adjust margin for smaller screens */
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 10px;
+  order: -1; /* Move the radio button to the left */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .payment-option {
+    margin-right: 5%; /* Adjust margin for smaller screens */
+  }
+}

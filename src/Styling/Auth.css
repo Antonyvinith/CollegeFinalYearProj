@@ -1,0 +1,122 @@
+
+.login {
+  width: 90%; 
+  height: 100%; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+
+.ipt {
+  width: 100%; 
+  padding: 10px; 
+  margin: 10px; 
+  border: 1px solid #cfbfbf; 
+  border-radius: 5px; 
+}
+
+.blogin {
+  margin-bottom: 20px; 
+  font-size: 350%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: bold ;
+}
+.dob{
+  width:190px;
+}
+.wrapper {
+  display: flex;
+}
+.login-container {
+  width: 55%;
+  padding: 5px;
+  margin-right: 10px; 
+}
+.background {
+  width: 100%;
+  padding-right: 400px;
+  width: 55%;
+  height: 70vh;
+  /* margin-bottom: 50px; */
+  /* margin-top: 60px; */
+  background-image: url('../images/image.png');
+  background-size: 110% ;
+  background: cover;
+  margin-left: auto;
+  margin-right: auto; 
+  background-repeat: no-repeat; 
+} 
+.signup {
+  width: 90%; 
+  height: 114%; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  float: right;
+  gap: 0px;
+}
+
+.ipt1 {
+  width: 80%; 
+  padding: 10px; 
+  margin: 10px; 
+  border: 1px solid #cfbfbf; 
+  border-radius: 5px;
+}
+
+.wrapper1 {
+  display: flex;
+  height: 85vh;
+}
+.signup-container {
+  width: 55%;
+  padding: 5px;
+  margin-right: 10px; 
+}
+h3 {
+  margin-bottom: 20px;
+  font-size: 400%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: bold ; 
+}
+.input{
+  width:500px;
+}
+.backgroundForgot {
+  width: 100%;
+  padding-right: 400px;
+  width: 55%;
+  height: 70vh;
+  /* margin-bottom: 50px; */
+  margin-top: 96px;
+  background-image: url('../images/image.png');
+  background-size: 110% ;
+  background: cover;
+  margin-left: auto;
+  margin-right: auto; 
+  background-repeat: no-repeat; 
+}
+
+.background1 {
+  width: 100%;
+  padding-right: 400px;
+  width: 55%;
+  height: 70vh;
+  margin-top: 50px;
+  background-image: url('../images/image.png');
+  background-size: 110% ;
+  background: cover;
+  margin-left: auto;
+  margin-right: auto; 
+  background-repeat: no-repeat; 
+}
+
+.ptag{
+  color: #cc0000;
+  font-size: 13px;
+  float: left;
+  margin-bottom: 25px;
+}

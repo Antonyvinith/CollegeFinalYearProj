@@ -1,0 +1,42 @@
+.he{
+    height: 40px;
+    background-color: rgb(33, 79, 79);
+    padding: 0%;
+    margin: 0%;
+    top:80px;
+}
+
+.category-item {
+    margin-left: 60px;
+    margin-right: 10px; /* Adjust spacing between category items */
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+    color: white;
+  }
+
+/* SubcategoryStyles.css */
+
+.subcategory-container {
+    position: fixed;
+    top: 120px;
+    left: 80px; /* Adjust this value to change the horizontal position */
+  }
+  
+  .subcategory-container h3 {
+    margin-top: 0;
+  }
+  
+  .subcategory-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .subcategory-container li {
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: rgb(6, 150, 117);
+  }
+  
+  .subcategory-container li:hover {
+    text-decoration: underline;
+  }
+  

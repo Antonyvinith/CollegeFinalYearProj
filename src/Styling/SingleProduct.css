@@ -1,0 +1,61 @@
+.products {
+  width: 276px;
+  margin: 15px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+/* .card{
+  height: 100%;
+  width: 81%;
+} */
+.card-img-top {
+  height: 200px; 
+  object-fit: cover; 
+}
+  .products:hover .SingleProduct {
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+    transform: scale(1.01); 
+  }
+  .products:hover {
+    cursor: pointer; 
+    transform: scale(1.01); 
+  }
+  .products:hover .card {
+    transform: scale(1.05); 
+    cursor: pointer; 
+  }
+
+  .ellipsis-text {
+    white-space:  nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+
+  .backButton {
+    background-color: bisque;
+    margin-top: 100px;
+    margin-right: 200px;
+    height: 35px;
+  }
+
+  .product-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    margin: 0 0.25rem;
+  }
+  
+  .quantity-controls span {
+    margin: 0 0.25rem;
+  }

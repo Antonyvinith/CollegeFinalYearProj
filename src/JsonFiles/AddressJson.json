@@ -1,0 +1,74 @@
+[
+    {
+        "addressType": "Home Address",
+        "line1": "123 Oak Street",
+        "line2": "Apt 302",
+        "city": "Springfield",
+        "state": "IL",
+        "country": "USA",
+        "pinCode": "62701"
+    },
+    {
+        "addressType": "Office Address",
+        "line1": "456 Elm Avenue",
+        "line2": "Suite 500",
+        "city": "Metropolis",
+        "state": "NY",
+        "country": "USA",
+        "pinCode": "10001"
+    },
+    {
+        "addressType": "Office Address",
+        "line1": "789 Maple Lane",
+        "line2": "",
+        "city": "Gotham",
+        "state": "NJ",
+        "country": "USA",
+        "pinCode": "07030"
+    },
+    {
+        "addressType": "Home Address",
+        "line1": "321 Pine Road",
+        "line2": "",
+        "city": "Central City",
+        "state": "MO",
+        "country": "USA",
+        "pinCode": "65802"
+    },
+    {
+        "addressType": "Home Address",
+        "line1": "321 Pine Road",
+        "line2": "",
+        "city": "Central City",
+        "state": "MO",
+        "country": "USA",
+        "pinCode": "65802"
+    },
+    {
+        "addressType": "Home Address",
+        "line1": "321 Pine Road",
+        "line2": "",
+        "city": "Central City",
+        "state": "MO",
+        "country": "USA",
+        "pinCode": "65802"
+    },
+    {
+        "addressType": "Home Address",
+        "line1": "321 Pine Road",
+        "line2": "",
+        "city": "Central City",
+        "state": "MO",
+        "country": "USA",
+        "pinCode": "65802"
+    },
+    {
+        "addressType": "Home Address",
+        "line1": "321 Pine Road",
+        "line2": "",
+        "city": "Central City",
+        "state": "MO",
+        "country": "USA",
+        "pinCode": "65802"
+    }
+]

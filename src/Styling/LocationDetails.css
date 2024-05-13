@@ -1,0 +1,23 @@
+.location-container {
+    display: flex;
+}
+
+.location-details {
+    flex: 1;
+}
+
+.store-image {
+    background-image: url("https://img.freepik.com/premium-vector/flat-store-facade-with-awning_23-2147542588.jpg");
+    background-size: cover;
+}
+
+.warehouse-image {
+    background-image: url("https://i.pinimg.com/564x/fc/37/59/fc3759ab8f0ad5ff9e1be4c38cec6e31.jpg");
+    background-size: cover;
+}
+
+.location-image {
+    width: 60%; 
+    height: 100vh; 
+}
+
