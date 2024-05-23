@@ -30,6 +30,8 @@ import UserList from "./pages/UserList";
 import Fulfillments from "./pages/Fulfillments";
 import ViewImages from "./components/ViewImages";
 import DataAnalytics from "./DataAnalytics/DataAnalytics";
+import textData from "./components/TextData";
+
 
 import pieChart from "./DataAnalytics/PieChartData";
 
@@ -64,6 +66,8 @@ function App() {
                 <Route path='/dataAnalytics' Component={DataAnalytics}/>
                 <Route path='/predectiveAnalysis' Component={pieChart}/>
                 <Route path='/viewVideo' Component={viewVideo}/>
+                <Route path='/TextData' Component={textData}/>
+
 
                 <Route path="viewImages" Component={ViewImages}/>
                 <Route path='/category' Component={CategoryList}/>

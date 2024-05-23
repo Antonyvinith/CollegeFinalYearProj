@@ -6,13 +6,14 @@ import Toolbar from "@mui/material/Toolbar";
 import Divider from "@mui/material/Divider";
 import Truck from "@mui/icons-material/LocalShipping";
 import { useNavigate } from "react-router-dom";
-import DevicesOtherIcon from '@mui/icons-material/DevicesOther';
-import HomeMaxIcon from '@mui/icons-material/HomeMax';
-import AdUnitsIcon from '@mui/icons-material/AdUnits';
-import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
-import AudiotrackIcon from '@mui/icons-material/Audiotrack';
-import ImageIcon from '@mui/icons-material/Image';
-import PieChartIcon from '@mui/icons-material/PieChart';
+import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
+import HomeMaxIcon from "@mui/icons-material/HomeMax";
+import AdUnitsIcon from "@mui/icons-material/AdUnits";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import AudiotrackIcon from "@mui/icons-material/Audiotrack";
+import ImageIcon from "@mui/icons-material/Image";
+import PieChartIcon from "@mui/icons-material/PieChart";
+import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import {
   Dashboard,
   InventoryTwoTone,
@@ -23,10 +24,10 @@ import {
 import { Collapse } from "@mui/material";
 import { useState } from "react";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
-import PermMediaIcon from '@mui/icons-material/PermMedia';
+import PermMediaIcon from "@mui/icons-material/PermMedia";
 import { AiOutlineUnorderedList } from "react-icons/ai";
-import InsightsIcon from '@mui/icons-material/Insights';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import InsightsIcon from "@mui/icons-material/Insights";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import {
   Store,
   ShopTwo,
@@ -36,7 +37,6 @@ import {
   FmdGood,
   Settings,
   ListAlt,
- 
 } from "@mui/icons-material";
 import "../Styling/SidebarStyle.css";
 import ListItemComp from "../customComponents/ListItem";
@@ -85,7 +85,6 @@ export default function Sidebar() {
           onMenuClick={handleItemClick}
         />
 
-
         {/* Analaytics */}
 
         <MenuItemComp
@@ -112,11 +111,8 @@ export default function Sidebar() {
             isSelected={selectedItem === "/predectiveAnalysis"}
             onItemClick={handleItemClick}
           />
-
-          
         </Collapse>
         {/* Analytics */}
-
 
         {/* Media List */}
         <MenuItemComp
@@ -128,6 +124,14 @@ export default function Sidebar() {
         />
 
         <Collapse in={isProdClosed} timeout="auto" unmountOnExit>
+          <ListItemComp
+            icon={<TextSnippetIcon />}
+            dynamicText="TextData"
+            path="/TextData"
+            isSelected={selectedItem === "/TextData"}
+            onItemClick={handleItemClick}
+          />
+
           <ListItemComp
             icon={<OndemandVideoIcon />}
             dynamicText="Videos"
@@ -143,7 +147,7 @@ export default function Sidebar() {
             isSelected={selectedItem === "/category"}
             onItemClick={handleItemClick}
           />
-          
+
           <ListItemComp
             icon={<ImageIcon />}
             dynamicText="Images"
@@ -152,7 +156,6 @@ export default function Sidebar() {
             onItemClick={handleItemClick}
           />
         </Collapse>
-
 
         {/* Media List */}
 
@@ -166,25 +169,13 @@ export default function Sidebar() {
           onMenuClick={handleInvCollapse}
         />
 
-          <Collapse in={isInvClosed} timeout="auto" unmountOnExit>
+        <Collapse in={isInvClosed} timeout="auto" unmountOnExit>
+          <ListItemComp icon={<HomeMaxIcon />} dynamicText="IntelliFridge" />
 
-          <ListItemComp 
-          icon={<HomeMaxIcon/>} 
-          dynamicText="IntelliFridge" 
-          />
-
-          <ListItemComp
-            icon={<AdUnitsIcon />}
-            dynamicText="FireSafe 5000"
-           
-          />
-
+          <ListItemComp icon={<AdUnitsIcon />} dynamicText="FireSafe 5000" />
         </Collapse>
 
-
         {/* Devices List */}
-
-
 
         {/* Admin Part */}
 
@@ -223,6 +214,5 @@ export default function Sidebar() {
         </Collapse>
       </ul>
     </div>
-    
   );
 }
