@@ -1,0 +1,5 @@
+'Alternative Approach:f ou have the original public key (pubKey used during encryption), you can directly use it for decryption without needing to reverse this string representation.
+In Summary:Directly reversing the 'ciphertextPubKey' string is not feasible due to the way it's constructed and the potential lack of context about the LSB extraction.
+If you have the original public key, use it directly for decryption.''Alternative Approach:f ou have the original public key (pubKey used during encryption), you can directly use it for decryption without needing to reverse this string representation.
+In Summary:Directly reversing the 'ciphertextPubKey' string is not feasible due to the way it's constructed and the potential lack of context about the LSB extraction.
+If you have the original public key, use it directly for decryption.'

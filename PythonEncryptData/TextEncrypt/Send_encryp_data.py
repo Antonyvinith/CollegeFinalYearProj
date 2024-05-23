@@ -7,7 +7,7 @@ from aes_ecc import encrypt_ECC, curve,decrypt_ECC
 client = MongoClient("mongodb://localhost:27017/")
 db = client.Data
 collection = db.TextData
-encryptedMsg=""
+
 
 def encrypt_and_save_to_mongodb(text_message):
     global decryptedMsg
@@ -23,25 +23,34 @@ def encrypt_and_save_to_mongodb(text_message):
         encryptedMsgObj = {
             'ciphertext': binascii.hexlify(encryptedMsg[0]).decode(),
             'nonce': binascii.hexlify(encryptedMsg[1]).decode(),
-            'authTag': binascii.hexlify(encryptedMsg[2]).decode(),
-            'ciphertextPubKey': binascii.hexlify(encryptedMsg[3])
+            'authTag': binascii.hexlify(encryptedMsg[2]).decode()
         }
 
      
         collection.insert_one(encryptedMsgObj)
         print("Data Encrypted",encryptedMsg)
 
-        print("Decrypted data",str(decrypt_ECC(encryptedMsg,privKey).decode('utf-8')))
-        decryptedMsg=str(decrypt_ECC(encryptedMsg,privKey).decode('utf-8'))
-
+        decryptedMsg=decrypt_ECC(encryptedMsg,privKey)
+        print(decryptedMsg)
+        writeDecryptedData(decryptedMsg)
 
         print('Text Data encrypted and saved to MongoDB successfully')
     except Exception as e:
         print('Error:', str(e))
 
+def writeDecryptedData(decryptedMsg):
+    path = "PythonDecrypt\DecryptedFile.txt"  
+    decryptedMsg=decryptedMsg.decode('utf-8')
+    try:
+        with open(path, "a") as file:
+            file.write(decryptedMsg[1:])
+        print("Decrypted data has been written to the file successfully.")
+    except Exception as e:
+        print("Error:", str(e))
 
 if __name__ == '__main__':
  
-    msg = b'Text to be encrypted by ECC public key and ' \
-      b'decrypted by its corresponding ECC private key'
-    encrypt_and_save_to_mongodb(msg)
+    with open('PythonEncryptData\TextEncrypt\\TExt.txt', 'rb') as file:
+        msg = file.read()
+        encrypt_and_save_to_mongodb(msg)
+   

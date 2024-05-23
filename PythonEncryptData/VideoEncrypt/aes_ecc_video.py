@@ -1,8 +1,6 @@
 from tinyec import registry
 from Crypto.Cipher import AES
 import hashlib, secrets, binascii
-from flask import Flask, request, jsonify
-
 
 def encrypt_AES_GCM(msg, secretKey):
     aesCipher = AES.new(secretKey, AES.MODE_GCM)
@@ -29,10 +27,6 @@ def encrypt_ECC(msg, pubKey):
     ciphertextPubKey = ciphertextPrivKey * curve.g
     return (ciphertext, nonce, authTag, ciphertextPubKey)
 
-
-
-
-
 def decrypt_ECC(encryptedMsg, privKey):
     (ciphertext, nonce, authTag, ciphertextPubKey) = encryptedMsg
     sharedECCKey = privKey * ciphertextPubKey
@@ -40,11 +34,14 @@ def decrypt_ECC(encryptedMsg, privKey):
     plaintext = decrypt_AES_GCM(ciphertext, nonce, authTag, secretKey)
     return plaintext
 
+def video_to_binary(file_path):
+    with open(file_path, 'rb') as video_file:
+        binary_data = video_file.read()
+    return binary_data
 
-
-
-
-
+def binary_to_video(binary_data, output_file_path):
+    with open(output_file_path, 'wb') as video_file:
+        video_file.write(binary_data)
 
 
 

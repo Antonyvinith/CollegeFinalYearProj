@@ -1,14 +1,14 @@
 from pymongo import MongoClient
 import binascii
 import hashlib, secrets
-from aes_ecc_video import encrypt_ECC, curve, video_to_binary
+from aes_ecc_video import encrypt_ECC, curve, video_to_binary,decrypt_ECC,binary_to_video
 
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client.Data
 collection = db.Video
 
-video_file_path = "sample_video.mp4"
+video_file_path = "PythonEncryptData\VideoEncrypt\sample_video.mp4"
 video_binary = video_to_binary(video_file_path)
 
 
@@ -30,3 +30,9 @@ encrypted_msg_doc = {
 collection.insert_one(encrypted_msg_doc)
 
 print('Video data encrypted and saved to MongoDB successfully.')
+
+decryptedMsg = decrypt_ECC(encrypted_msg, privKey)
+print("decrypted msg:", decryptedMsg)
+
+output_file_path = "PythonDecrypt/Videos/OutputVideo.mp4"
+binary_to_video(decryptedMsg, output_file_path)
