@@ -6,7 +6,8 @@ import { Box } from "@mui/material";
 import { Button } from "react-bootstrap";
 import ReactPlayer from 'react-player';
 import "../Styling/SidebarStyle.css";
-//import video from "https://vimeo.com/oembed?url=https://vimeo.com/945732013"
+
+
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -16,30 +17,7 @@ function ProductList() {
   const scrollToRef = useRef(null);
   const perPageData = 10;
 
-  useEffect(() => {
-    loadProducts();
-    window.scrollTo(0, 0);
-  }, [currentPage]);
-
-  const loadProducts = async () => {
-    const res = await axios.get(`http://localhost:3000/viewVideo`);
-    // const headers = {'Authorization': `Bearer ${token}`};
-  };
-
-  const handlePrev = () => {
-    if (!first) {
-      setCurrentPage(currentPage - 1);
-      window.scrollTo(0, 0);
-      //  scrollToRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-  const handleNext = () => {
-    if (!last) {
-      setCurrentPage(currentPage + 1);
-      window.scrollTo(0, 0);
-      //   scrollToRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  
 
   const [playing, setPlaying] = useState(false);
 
@@ -59,7 +37,7 @@ function ProductList() {
           <div>
             <ReactPlayer
             config
-              url={{src:"https://vimeo.com/945732013",vimeo:true}}
+              url={video}
               playing={playing}
               controls
               width="100%"
