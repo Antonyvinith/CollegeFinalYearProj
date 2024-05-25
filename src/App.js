@@ -18,7 +18,7 @@ import viewVideo from "./components/ViewVideo"
 import AdminAuth from "./components/AdminAuth";
 import ForgotAdmin from "./components/ForgotAdmin";
 import HomeDashboard from "./pages/HomeDashboard";
-import CategoryList from "./pages/CategoryList";
+import CategoryList from "./components/ViewAudio";
 import CustomerList from "./pages/CustomerList";
 import ProductList from "./pages/ProductList";
 import InventoryList from "./pages/InventoryList";

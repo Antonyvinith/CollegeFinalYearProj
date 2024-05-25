@@ -43,7 +43,7 @@ def binary_to_audio(binary_data, output_file_path):
     with open(output_file_path, 'wb') as audio_file:
         audio_file.write(binary_data)
 
-audio_file_path = "sample_audio.mp3"
+audio_file_path = "PythonEncryptData\AudioEncrypt\sample_audio.mp3"
 msg = audio_to_binary(audio_file_path)
 
 print("original msg:", msg)
@@ -59,8 +59,5 @@ encryptedMsgObj = {
 }
 print("encrypted msg:", encryptedMsgObj)
 
-decryptedMsg = decrypt_ECC(encryptedMsg, privKey)
-print("decrypted msg:", decryptedMsg)
 
-output_file_path = "output_audio.mp3"  # Output audio file path
-binary_to_audio(decryptedMsg, output_file_path)
+

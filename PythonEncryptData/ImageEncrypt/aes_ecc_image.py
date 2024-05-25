@@ -36,7 +36,7 @@ def decrypt_ECC(encryptedMsg, privKey):
     plaintext = decrypt_AES_GCM(ciphertext, nonce, authTag, secretKey)
     return plaintext
 
-image_path = "Ghost1.jpg"
+image_path = "PythonEncryptData\ImageEncrypt\Ghost1.jpg"
 image = Image.open(image_path)
 
 def image_to_byte_array(image):

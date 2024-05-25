@@ -8,7 +8,7 @@ import ReactPlayer from "react-player";
 import "../Styling/SidebarStyle.css";
 import { Line } from "react-chartjs-2";
 import chartData from "./ChartData";
-import { Pie } from 'react-chartjs-2';
+import { Pie } from "react-chartjs-2";
 
 import { Chart, CategoryScale, LinearScale, PointElement } from "chart.js/auto";
 
@@ -21,7 +21,7 @@ Chart.register(CategoryScale, LinearScale, PointElement);
 
 function pieChart() {
   const data = {
-    labels: ["Red", "Blue", "Yellow"],
+    labels: ["Usages", "Time", "Predictive"],
     datasets: [
       {
         data: [300, 50, 100],

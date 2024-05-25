@@ -1,7 +1,9 @@
 from pymongo import MongoClient
-from aes_ecc_audio import encrypt_ECC, curve, audio_to_binary, binary_to_audio
+from aes_ecc_audio import encrypt_ECC, curve, audio_to_binary, binary_to_audio,decrypt_ECC
 import binascii
 import hashlib, secrets, binascii
+import os
+import uuid
 
 # Connect to MongoDB
 client = MongoClient("mongodb://localhost:27017/")
@@ -9,7 +11,7 @@ db = client.Data
 collection = db.Audios
 
 # Load audio from file
-audio_file_path = "sample_audio.mp3"
+audio_file_path = "PythonEncryptData\AudioEncrypt\sample_audio.mp3"
 audio_data = audio_to_binary(audio_file_path)
 
 # Generate ECC key pair
@@ -31,3 +33,12 @@ encrypted_audio_doc = {
 collection.insert_one(encrypted_audio_doc)
 
 print('Audio encrypted and saved to MongoDB successfully.')
+
+decryptedMsg = decrypt_ECC(encrypted_audio, privKey)
+print("decrypted msg:", decryptedMsg)
+
+unique_filename = f"decrypted_audio_{uuid.uuid4().hex}.mp3"
+output_path = os.path.join("src", "PythonDecrypt", "Audio", unique_filename)
+
+
+binary_to_audio(decryptedMsg, output_path)
