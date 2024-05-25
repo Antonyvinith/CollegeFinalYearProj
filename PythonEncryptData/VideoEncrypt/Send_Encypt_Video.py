@@ -37,5 +37,6 @@ decryptedMsg = decrypt_ECC(encrypted_msg, privKey)
 print("decrypted msg:", decryptedMsg)
 
 unique_filename = f"OutputVideo_{datetime.now().strftime('%Y%m%d_%H%M%S')}.mp4"
-output_file_path = os.path.join("PythonDecrypt", "Videos", unique_filename)
+output_file_path = os.path.join("src","PythonDecrypt", "Videos", unique_filename)
 binary_to_video(decryptedMsg, output_file_path)
+
